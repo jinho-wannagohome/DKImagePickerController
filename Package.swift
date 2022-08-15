@@ -21,21 +21,13 @@ let package = Package(
     targets: [
         .target(
             name: "DKImagePickerController",
-            dependencies: ["DKCamera", "DKPhotoGallery", "CropViewController"],
+            dependencies: ["DKCamera", "DKPhotoGallery", "TOCropViewController"],
             path: "Sources"),
         
         .target(name: "TOCropViewController",
                 path: "TOCropViewController/ObjC",
                 exclude:["Supporting/Info.plist"],
                 resources: [.process("Resources")],
-                publicHeadersPath: "include"),
-        
-        .target(
-            name: "CropViewController",
-            dependencies: ["TOCropViewController"],
-            path: "TOCropViewController/Swift",
-            exclude:["Info.plist"],
-            sources: ["CropViewController.swift"]
-        )
+                publicHeadersPath: "include/TOCropViewController"),
     ]
 )

@@ -20,8 +20,8 @@
 //  WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR
 //  IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 
-#import "TOActivityCroppedImageProvider.h"
-#import "UIImage+CropRotate.h"
+#import "../include/TOCropViewController/UIImage+CropRotate.h"
+#import "../include/TOCropViewController/TOActivityCroppedImageProvider.h""
 
 @interface TOActivityCroppedImageProvider ()
 

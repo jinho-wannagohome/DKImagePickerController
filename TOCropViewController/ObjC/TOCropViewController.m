@@ -20,12 +20,12 @@
 //  WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR
 //  IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 
-#import "TOCropViewController.h"
+#import "include/TOCropViewController/TOCropViewController.h"
 
-#import "TOCropViewControllerTransitioning.h"
-#import "TOActivityCroppedImageProvider.h"
-#import "UIImage+CropRotate.h"
-#import "TOCroppedImageAttributes.h"
+#import "include/TOCropViewController/TOCropViewControllerTransitioning.h"
+#import "include/TOCropViewController/TOActivityCroppedImageProvider.h"
+#import "include/TOCropViewController/UIImage+CropRotate.h"
+#import "include/TOCropViewController/TOCroppedImageAttributes.h"
 
 static const CGFloat kTOCropViewControllerTitleTopPadding = 14.0f;
 static const CGFloat kTOCropViewControllerToolbarHeight = 44.0f;
