@@ -418,27 +418,12 @@ open class DKImageAssetExporter: DKImageBaseManager {
                         }
                         
                         if var imageData = data {
-                            if #available(iOS 9, *) {
-                                var resource: PHAssetResource? = nil
-                                for assetResource in PHAssetResource.assetResources(for: originalAsset) {
-                                    if assetResource.type == .photo {
-                                        resource = assetResource
-                                        break
-                                    }
-                                }
-                                if let resource = resource {
-                                    asset.fileName = resource.originalFilename
-                                }
+                            if let info = info, let fileURL = info["PHImageFileURLKey"] as? NSURL {
+                                asset.fileName = fileURL.lastPathComponent ?? "Image"
+                            } else {
+                                asset.fileName = "Image.jpg"
                             }
                             
-                            if asset.fileName == nil {
-                                if let info = info, let fileURL = info["PHImageFileURLKey"] as? NSURL {
-                                    asset.fileName = fileURL.lastPathComponent ?? "Image"
-                                } else {
-                                    asset.fileName = "Image.jpg"
-                                }
-                            }
-                                                                                    
                             if self.configuration.imageExportPreset == .compatible && self.isHEIC(with: imageData) {
                                 if let fileName = asset.fileName, let jpgData = self.imageToJPEG(with: imageData) {
                                     imageData = jpgData

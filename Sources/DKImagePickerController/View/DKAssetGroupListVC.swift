@@ -295,6 +295,7 @@ class DKAssetGroupListVC: UITableViewController, DKImageGroupDataManagerObserver
         }
         
         cell.configure(with: assetGroup, tag: indexPath.row + 1, dataManager: groupDataManager, imageRequestOptions: groupThumbnailRequestOptions)
+        (cell as? UITableViewCell)?.contentView.backgroundColor = self.imagePickerController.UIDelegate.imagePickerControllerGroupCellBackgroundColor()
 
         return cell as! UITableViewCell
     }
