@@ -39,11 +39,11 @@
       },
       {
         "package": "TOCropViewController",
-        "repositoryURL": "https://github.com/TimOliver/TOCropViewController",
+        "repositoryURL": "https://github.com/jinho-wannagohome/TOCropViewController.git",
         "state": {
-          "branch": null,
-          "revision": "dad97167bf1be16aeecd109130900995dd01c515",
-          "version": "2.6.0"
+          "branch": "spm",
+          "revision": "f5191f43ae097efef23f8e8133509742a8b26540",
+          "version": null
         }
       }
     ]
