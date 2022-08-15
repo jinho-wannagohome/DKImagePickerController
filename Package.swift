@@ -17,12 +17,17 @@ let package = Package(
     dependencies: [
         .package(url: "https://github.com/zhangao0086/DKCamera", .branch("develop")),
         .package(url: "https://github.com/zrn-ns/DKPhotoGallery", .branch("feature/support_swiftpm")),
-        .package(url: "https://github.com/jinho-wannagohome/TOCropViewController.git", .branch("spm")),
     ],
     targets: [
         .target(
             name: "DKImagePickerController",
             dependencies: ["DKCamera", "DKPhotoGallery", "TOCropViewController"],
             path: "Sources"),
+        
+        .target(name: "TOCropViewController",
+                path: "TOCropViewController",
+                exclude:["Supporting/Info.plist"],
+                resources: [.process("Resources")],
+                publicHeadersPath: "include")
     ]
 )
